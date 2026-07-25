@@ -3,176 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALIDS BEAUTY & COSMETICS | Glow Naturally in Kigumba</title>
-<meta name="description" content="Original Skincare, Makeup, Hair & Fragrances in Kigumba. Free Delivery. Shop ALIDS Beauty & Cosmetics.">
+<title>ALIDS BEAUTY & COSMETICS | Luxury Beauty in Kigumba</title>
+<meta name="description" content="Luxury Original Skincare, Makeup, Hair & Fragrances. Free Delivery in Kigumba. Shop ALIDS Beauty.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --gold:#D4AF37; --black:#111; --white:#fff; --pink:#FFF5F7; --gray:#666;
-}
+:root{--gold:#D4AF37;--black:#0A0A0A;--dark:#111;--white:#fff;--gray:#aaa}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;color:var(--black);background:var(--white);line-height:1.6}
-img{max-width:100%;display:block}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+.container{max-width:1300px;margin:0 auto;padding:0 20px}
+img{width:100%;display:block}
 
-/* NAV */
-nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
-.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);font-weight:600;text-decoration:none}
-.nav-links{display:flex;gap:25px;align-items:center}
-.nav-links a{color:var(--black);text-decoration:none;font-weight:500;transition:.3s}
+/* NAV - ON ALL PAGES */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(10,10,10,.85);backdrop-filter:blur(12px);border-bottom:1px solid #222;transition:.3s}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);font-weight:700;text-decoration:none;letter-spacing:2px}
+.nav-links{display:flex;gap:35px}
+.nav-links a{color:var(--white);text-decoration:none;font-weight:500;font-size:14px;letter-spacing:1px;transition:.3s;position:relative}
+.nav-links a:after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--gold);transition:.3s}
 .nav-links a:hover{color:var(--gold)}
-.btn-whatsapp{background:var(--gold);color:var(--black);padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s}
-.btn-whatsapp:hover{background:#c49e2c;transform:translateY(-2px)}
+.nav-links a:hover:after{width:100%}
+.btn-wa{background:var(--gold);color:var(--black);padding:12px 26px;font-weight:700;text-decoration:none;transition:.3s}
+.btn-wa:hover{background:#c49e2c;transform:scale(1.05)}
 
-/* HERO */
-.hero{background:linear-gradient(135deg, var(--pink) 0%, #fff 100%);padding:80px 0;text-align:center}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);margin-bottom:15px}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:18px;color:var(--gray);margin-bottom:30px}
-.hero-btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--black);padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600}
-.btn-secondary{border:2px solid var(--gold);color:var(--black);padding:12px 30px;border-radius:50px;text-decoration:none;font-weight:600}
+/* HERO SLIDER */
+.slider{height:100vh;position:relative}
+.slide{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease-in-out}
+.slide.active{opacity:1}
+.slide1{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1600') center/cover}
+.slide2{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1522338140262-f46f5913618e?q=80&w=1600') center/cover}
+.slide3{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1600') center/cover}
+.slide-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:90%}
+.slide-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(45px,7vw,90px);line-height:1.1;margin-bottom:20px;animation:fadeUp 1.2s}
+.slide-content h1 span{color:var(--gold)}
+.slide-content p{font-size:18px;color:var(--gray);margin-bottom:35px;animation:fadeUp 1.4s}
+.btn-primary{background:var(--gold);color:var(--black);padding:16px 40px;text-decoration:none;font-weight:700;letter-spacing:1px;transition:.3s;display:inline-block;animation:fadeUp 1.6s}
+.btn-primary:hover{background:#c49e2c;transform:translateY(-3px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+.section{padding:100px 0;background:var(--dark)}
+.section-title{text-align:center;font-family:'Cormorant Garamond',serif;font-size:50px;margin-bottom:15px}
+.section-sub{text-align:center;color:var(--gray);margin-bottom:60px}
 
 /* WHY US */
-.why{padding:60px 0;background:var(--white)}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;text-align:center}
-.why-card{padding:30px;border-radius:15px;background:var(--pink)}
-.why-card h3{color:var(--gold);margin:15px 0 10px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.why-card{background:#0A0A0A;padding:50px 30px;border:1px solid #222;text-align:center;transition:.4s}
+.why-card:hover{border-color:var(--gold);transform:translateY(-10px)}
+.why-icon{font-size:50px;margin-bottom:20px}
 
-/* BEST SELLERS */
-.products{padding:60px 0;background:var(--pink)}
-.section-title{text-align:center;font-family:'Playfair Display',serif;font-size:36px;margin-bottom:40px}
-.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-.prod-card{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
-.prod-card:hover{transform:translateY(-5px)}
-.prod-info{padding:20px;text-align:center}
-.prod-info h4{margin-bottom:8px}
-.price{color:var(--gold);font-weight:600;font-size:18px;margin-bottom:12px}
-.btn-buy{background:var(--black);color:var(--white);padding:10px 20px;border-radius:50px;text-decoration:none;font-size:14px;display:inline-block}
+/* PRODUCTS */
+.products{background:var(--black)}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.prod-card{background:#0A0A0A;border:1px solid #222;overflow:hidden;transition:.4s;opacity:0;transform:translateY(40px)}
+.prod-card.show{opacity:1;transform:translateY(0)}
+.prod-card:hover{border-color:var(--gold)}
+.prod-card img{height:350px;object-fit:cover;transition:.5s}
+.prod-card:hover img{transform:scale(1.1)}
+.prod-info{padding:25px;text-align:center}
+.prod-info h4{font-size:18px;margin-bottom:10px}
+.price{color:var(--gold);font-size:20px;font-weight:700;margin-bottom:15px}
+.btn-buy{border:2px solid var(--gold);color:var(--gold);padding:12px 0;text-align:center;display:block;text-decoration:none;font-weight:600;transition:.3s}
+.btn-buy:hover{background:var(--gold);color:var(--black)}
+
+/* CTA */
+.cta{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1600') center/cover fixed;padding:120px 0;text-align:center}
 
 /* FOOTER */
-footer{background:var(--black);color:var(--white);padding:40px 0;text-align:center}
-footer a{color:var(--gold);text-decoration:none}
-.footer-links{display:flex;gap:20px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
-.footer-links a{color:var(--white)}
+footer{background:#000;padding:60px 0;text-align:center;border-top:1px solid #222}
+.footer-links{display:flex;gap:30px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
+.footer-links a{color:var(--white);text-decoration:none;transition:.3s}
+.footer-links a:hover{color:var(--gold)}
 
-@media(max-width:768px){
-  .hero{padding:50px 0}
-  .nav-links{display:none} /* hide on mobile to keep it clean */
-}
+@media(max-width:900px){.nav-links{display:none}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAV - LINKS TO ALL PAGES -->
 <nav>
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">ALIDS ✨</a>
+    <a href="index.html" class="logo">ALIDS</a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
     </div>
-    <a href="https://wa.me/256776934860" class="btn-whatsapp">Order on WhatsApp</a>
+    <a href="https://wa.me/256776934860" class="btn-wa">WhatsApp</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>ALIDS <span>BEAUTY & COSMETICS</span></h1>
-    <p>Glow Naturally. Shine Confidently.<br>Original Skincare, Makeup, Hair & Fragrances in Kigumba</p>
-    <div class="hero-btns">
-      <a href="shop.html" class="btn-primary">Shop Best Sellers</a>
-      <a href="https://wa.me/256776934860" class="btn-secondary">Chat on WhatsApp</a>
+<!-- HERO SLIDER -->
+<section class="slider">
+  <div class="slide slide1 active">
+    <div class="slide-content">
+      <h1>ALIDS <span>BEAUTY</span> & COSMETICS</h1>
+      <p>Glow Naturally. Shine Confidently. Luxury Beauty in Kigumba</p>
+      <a href="shop.html" class="btn-primary">SHOP COLLECTION</a>
+    </div>
+  </div>
+  <div class="slide slide2">
+    <div class="slide-content">
+      <h1>100% <span>AUTHENTIC</span> PRODUCTS</h1>
+      <p>No Fakes. Only Original Skincare, Makeup & Fragrances</p>
+      <a href="https://wa.me/256776934860" class="btn-primary">ORDER ON WHATSAPP</a>
+    </div>
+  </div>
+  <div class="slide slide3">
+    <div class="slide-content">
+      <h1>FREE <span>DELIVERY</span> IN KIGUMBA</h1>
+      <p>Visit us at Kigumba Main Market</p>
+      <a href="contact.html" class="btn-primary">VISIT STORE</a>
     </div>
   </div>
 </section>
 
 <!-- WHY US -->
-<section class="why">
+<section class="section">
   <div class="container">
+    <h2 class="section-title">Why Choose ALIDS</h2>
+    <p class="section-sub">Your trusted beauty destination</p>
     <div class="why-grid">
       <div class="why-card">
-        <h3>✓ Original Products</h3>
-        <p>100% authentic beauty products. No fakes, guaranteed.</p>
+        <div class="why-icon">✓</div>
+        <h3>100% Original</h3>
+        <p>We guarantee authentic products from trusted brands. No counterfeits.</p>
       </div>
       <div class="why-card">
-        <h3>🚚 Free Delivery</h3>
-        <p>Free delivery in Kigumba Town. Fast & reliable.</p>
+        <div class="why-icon">🚚</div>
+        <h3>Free Delivery</h3>
+        <p>Fast and free delivery anywhere in Kigumba Town. Same day.</p>
       </div>
       <div class="why-card">
-        <h3>💄 Expert Advice</h3>
-        <p>Free beauty consultation to find what works for you.</p>
+        <div class="why-icon">💄</div>
+        <h3>Expert Guidance</h3>
+        <p>Free beauty consultation to find products perfect for you.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BEST SELLERS -->
-<section class="products" id="shop">
+<section class="section products">
   <div class="container">
     <h2 class="section-title">Best Sellers</h2>
+    <p class="section-sub">Most loved by our customers</p>
     <div class="prod-grid">
-      
+
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&auto=format&fit=crop" alt="Vitamin C Serum" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600" alt="Vitamin C Serum" loading="lazy">
         <div class="prod-info">
-          <h4>Vitamin C Serum</h4>
+          <h4>Vitamin C Brightening Serum</h4>
           <div class="price">UGX 65,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Vitamin%20C%20Serum" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Vitamin%20C%20Serum%20UGX65000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1589710751893-f9a9794e8a02?w=400&auto=format&fit=crop" alt="Matte Lipstick" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1589710751893-f9a9794e8a02?q=80&w=600" alt="Lipstick" loading="lazy">
         <div class="prod-info">
           <h4>Matte Liquid Lipstick</h4>
           <div class="price">UGX 25,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Matte%20Lipstick" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Matte%20Lipstick%20UGX25000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&auto=format&fit=crop" alt="Body Lotion" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=600" alt="Body Lotion" loading="lazy">
         <div class="prod-info">
           <h4>Shea Butter Body Lotion</h4>
           <div class="price">UGX 45,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Body%20Lotion" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Body%20Lotion%20UGX45000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop" alt="Hair Oil" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=600" alt="Hair Oil" loading="lazy">
         <div class="prod-info">
           <h4>Hair Growth Oil</h4>
           <div class="price">UGX 40,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Hair%20Growth%20Oil" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Hair%20Growth%20Oil%20UGX40000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&auto=format&fit=crop" alt="Perfume" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600" alt="Perfume" loading="lazy">
         <div class="prod-info">
-          <h4>Women Perfume</h4>
+          <h4>Luxury Women Perfume</h4>
           <div class="price">UGX 120,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Perfume" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Women%20Perfume%20UGX120000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
       <div class="prod-card">
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&auto=format&fit=crop" alt="Foundation" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600" alt="Foundation" loading="lazy">
         <div class="prod-info">
           <h4>Full Coverage Foundation</h4>
           <div class="price">UGX 80,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Foundation" class="btn-buy">Order on WhatsApp</a>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Foundation%20UGX80000" class="btn-buy">ORDER ON WHATSAPP</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb0c9a594?q=80&w=600" alt="Eyeshadow" loading="lazy">
+        <div class="prod-info">
+          <h4>18-Color Eyeshadow Palette</h4>
+          <div class="price">UGX 60,000</div>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Eyeshadow%20Palette%20UGX60000" class="btn-buy">ORDER ON WHATSAPP</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=600" alt="Shampoo" loading="lazy">
+        <div class="prod-info">
+          <h4>Moisturizing Shampoo</h4>
+          <div class="price">UGX 30,000</div>
+          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Shampoo%20UGX30000" class="btn-buy">ORDER ON WHATSAPP</a>
         </div>
       </div>
 
     </div>
+    <div style="text-align:center;margin-top:50px">
+      <a href="shop.html" class="btn-primary">VIEW FULL CATALOG</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2 class="section-title">Ready to Glow?</h2>
+    <p style="color:var(--gray);margin:20px 0 30px">Chat with us for recommendations and instant ordering</p>
+    <a href="https://wa.me/256776934860" class="btn-primary">CHAT 0776934860</a>
   </div>
 </section>
 
@@ -180,17 +244,41 @@ footer a{color:var(--gold);text-decoration:none}
 <footer>
   <div class="container">
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
     </div>
-    <p><b>ALIDS BEAUTY & COSMETICS</b></p>
+    <h3 style="font-family:'Cormorant Garamond';font-size:28px;color:var(--gold);margin-bottom:15px">ALIDS BEAUTY & COSMETICS</h3>
     <p>Kigumba Main Market, Kigumba Town</p>
-    <p>WhatsApp: <a href="https://wa.me/256776934860">0776934860</a> | Hours: Mon-Sat 8am-7pm</p>
-    <p style="margin-top:20px;font-size:12px">© 2026 ALIDS Beauty. Glow Naturally.</p>
+    <p>WhatsApp: <a href="https://wa.me/256776934860" style="color:var(--gold)">0776934860</a> | Hours: Mon-Sat 8am-7pm</p>
+    <p style="margin-top:30px;font-size:12px;color:var(--gray)">© 2026 ALIDS Beauty. All Rights Reserved.</p>
   </div>
 </footer>
 
+<script>
+// AUTO SLIDER
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+setInterval(() => {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}, 5000);
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.prod-card').forEach(card => {
+  observer.observe(card);
+});
+</script>
+
 </body>
-  </html>
+        </html>
