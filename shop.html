@@ -3,51 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop - ALIDS BEAUTY & COSMETICS | All Products in Kigumba</title>
-<meta name="description" content="Shop 16+ original beauty products at ALIDS. Skincare, Makeup, Hair, Fragrances. Order on WhatsApp. Free Delivery in Kigumba.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Shop - ALIDS BEAUTY & COSMETICS | 20+ Luxury Products</title>
+<meta name="description" content="Shop 20+ original beauty products. Skincare, Makeup, Hair, Fragrances. Order on WhatsApp. Free Delivery Kigumba.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#D4AF37;--black:#111;--white:#fff;--pink:#FFF5F7;--gray:#666}
+:root{--gold:#D4AF37;--black:#0A0A0A;--dark:#111;--white:#fff;--gray:#aaa}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--black)}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-img{max-width:100%;display:block}
+body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white)}
+.container{max-width:1400px;margin:0 auto;padding:0 20px}
 
-/* NAV */
-nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
-.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);font-weight:600;text-decoration:none}
-.btn-whatsapp{background:var(--gold);color:var(--black);padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:600}
+/* NAV - SAME AS PAGE 1 */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid #222}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);font-weight:700;text-decoration:none;letter-spacing:2px}
+.nav-links{display:flex;gap:35px}
+.nav-links a{color:var(--white);text-decoration:none;font-weight:500;font-size:14px;letter-spacing:1px;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a.active{color:var(--gold)}
+.btn-wa{background:var(--gold);color:var(--black);padding:12px 26px;font-weight:700;text-decoration:none}
 
 /* PAGE HEADER */
-.page-head{background:var(--pink);padding:40px 0;text-align:center}
-.page-head h1{font-family:'Playfair Display',serif;font-size:40px}
-.page-head p{color:var(--gray)}
+.page-head{padding:140px 0 60px;text-align:center;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1522338140262-f46f5913618e?q=80&w=1600') center/cover fixed}
+.page-head h1{font-family:'Cormorant Garamond',serif;font-size:60px}
+.page-head h1 span{color:var(--gold)}
+.page-head p{color:var(--gray);font-size:18px;margin-top:10px}
 
-/* FILTERS */
-.filters{padding:25px 0;position:sticky;top:70px;background:var(--white);z-index:99;border-bottom:1px solid #eee}
-.filter-wrap{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center}
-.filter-btn{border:2px solid #ddd;background:var(--white);padding:10px 20px;border-radius:50px;cursor:pointer;font-weight:500;transition:.3s}
-.filter-btn.active,.filter-btn:hover{border-color:var(--gold);background:var(--gold);color:var(--black)}
-#searchBox{padding:10px 15px;border:2px solid #ddd;border-radius:50px;width:250px;font-family:'Poppins'}
+/* FILTER BAR */
+.filter-bar{position:sticky;top:80px;z-index:999;background:var(--black);padding:25px 0;border-bottom:1px solid #222}
+.filter-wrap{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+#searchBox{background:#0A0A0A;border:1px solid #333;color:var(--white);padding:14px 20px;border-radius:0;width:300px;font-family:'Montserrat'}
+#searchBox:focus{border-color:var(--gold);outline:none}
+.filter-btns{display:flex;gap:10px;flex-wrap:wrap}
+.filter-btn{background:#0A0A0A;border:1px solid #333;color:var(--white);padding:12px 24px;cursor:pointer;font-weight:600;transition:.3s}
+.filter-btn.active,.filter-btn:hover{background:var(--gold);color:var(--black);border-color:var(--gold)}
 
 /* PRODUCTS */
-.products{padding:50px 0}
-.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:25px}
-.prod-card{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.06);transition:.3s;position:relative}
-.prod-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
-.badge{position:absolute;top:10px;left:10px;background:var(--gold);color:var(--black);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600}
-.prod-info{padding:18px;text-align:center}
-.prod-info h4{font-size:16px;margin-bottom:6px;min-height:40px}
-.category{font-size:12px;color:var(--gray);margin-bottom:8px}
-.price{color:var(--gold);font-weight:700;font-size:18px;margin-bottom:12px}
-.btn-buy{background:var(--black);color:var(--white);padding:10px 18px;border-radius:50px;text-decoration:none;font-size:14px;display:block;width:100%;font-weight:600}
+.products{padding:80px 0;background:var(--dark)}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px}
+.prod-card{background:#0A0A0A;border:1px solid #222;overflow:hidden;transition:.4s;opacity:0;transform:translateY(30px)}
+.prod-card.show{opacity:1;transform:translateY(0)}
+.prod-card:hover{border-color:var(--gold)}
+.badge{position:absolute;background:var(--gold);color:var(--black);padding:6px 14px;font-size:12px;font-weight:700;z-index:2}
+.prod-img{position:relative;overflow:hidden;height:350px}
+.prod-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.prod-card:hover .prod-img img{transform:scale(1.1)}
+.prod-info{padding:25px;text-align:center}
+.category{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.prod-info h4{font-size:18px;margin-bottom:12px;min-height:44px}
+.price{color:var(--gold);font-size:22px;font-weight:700;margin-bottom:15px}
+.btn-buy{border:2px solid var(--gold);color:var(--gold);padding:12px 0;text-align:center;display:block;text-decoration:none;font-weight:700;transition:.3s}
 .btn-buy:hover{background:var(--gold);color:var(--black)}
 
 /* FOOTER */
-footer{background:var(--black);color:var(--white);padding:40px 0;text-align:center;margin-top:50px}
-footer a{color:var(--gold);text-decoration:none}
+footer{background:#000;padding:60px 0;text-align:center;border-top:1px solid #222}
+.footer-links{display:flex;gap:30px;justify-content:center;margin-bottom:30px}
+.footer-links a{color:var(--white);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+
+@media(max-width:900px){.nav-links{display:none} #searchBox{width:100%}}
 </style>
 </head>
 <body>
@@ -55,28 +68,36 @@ footer a{color:var(--gold);text-decoration:none}
 <!-- NAV -->
 <nav>
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">ALIDS ✨</a>
-    <a href="https://wa.me/256776934860" class="btn-whatsapp">Order on WhatsApp</a>
+    <a href="index.html" class="logo">ALIDS</a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html" class="active">SHOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <a href="https://wa.me/256776934860" class="btn-wa">WhatsApp</a>
   </div>
 </nav>
 
 <!-- HEADER -->
 <section class="page-head">
   <div class="container">
-    <h1>Shop All Products</h1>
-    <p>16+ Original Beauty Products. Free Delivery in Kigumba</p>
+    <h1>Shop <span>Collection</span></h1>
+    <p>20+ Original Luxury Beauty Products. Free Delivery in Kigumba</p>
   </div>
 </section>
 
 <!-- FILTERS -->
-<section class="filters">
+<section class="filter-bar">
   <div class="container filter-wrap">
     <input type="text" id="searchBox" placeholder="Search products...">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="skincare">Skincare</button>
-    <button class="filter-btn" data-filter="makeup">Makeup</button>
-    <button class="filter-btn" data-filter="hair">Hair Care</button>
-    <button class="filter-btn" data-filter="fragrance">Fragrances</button>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="skincare">SKINCARE</button>
+      <button class="filter-btn" data-filter="makeup">MAKEUP</button>
+      <button class="filter-btn" data-filter="hair">HAIR</button>
+      <button class="filter-btn" data-filter="fragrance">FRAGRANCE</button>
+    </div>
   </div>
 </section>
 
@@ -85,172 +106,49 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="container">
     <div class="prod-grid" id="prodGrid">
       
-      <!-- SKINCARE -->
-      <div class="prod-card" data-category="skincare">
-        <span class="badge">BESTSELLER</span>
-        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Skincare</div>
-          <h4>Vitamin C Brightening Serum</h4>
-          <div class="price">UGX 65,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Vitamin%20C%20Serum%20UGX65000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
+      <!-- SKINCARE 5 -->
+      <div class="prod-card" data-category="skincare"><div class="prod-img"><span class="badge">BESTSELLER</span><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=600"></div><div class="prod-info"><div class="category">Skincare</div><h4>Vitamin C Brightening Serum</h4><div class="price">UGX 65,000</div><a href="https://wa.me/256776934860?text=I%20want%20Vitamin%20C%20Serum%20UGX65000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="skincare"><div class="prod-img"><img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=600"></div><div class="prod-info"><div class="category">Skincare</div><h4>Gentle Facial Cleanser</h4><div class="price">UGX 35,000</div><a href="https://wa.me/256776934860?text=I%20want%20Facial%20Cleanser%20UGX35000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="skincare"><div class="prod-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600"></div><div class="prod-info"><div class="category">Skincare</div><h4>Sunscreen SPF 50</h4><div class="price">UGX 50,000</div><a href="https://wa.me/256776934860?text=I%20want%20Sunscreen%20SPF50%20UGX50000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="skincare"><div class="prod-img"><img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?q=80&w=600"></div><div class="prod-info"><div class="category">Skincare</div><h4>Shea Butter Body Lotion</h4><div class="price">UGX 45,000</div><a href="https://wa.me/256776934860?text=I%20want%20Body%20Lotion%20UGX45000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="skincare"><div class="prod-img"><span class="badge">NEW</span><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=600"></div><div class="prod-info"><div class="category">Skincare</div><h4>Niacinamide Toner</h4><div class="price">UGX 40,000</div><a href="https://wa.me/256776934860?text=I%20want%20Niacinamide%20Toner%20UGX40000" class="btn-buy">ORDER NOW</a></div></div>
 
-      <div class="prod-card" data-category="skincare">
-        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Skincare</div>
-          <h4>Gentle Facial Cleanser</h4>
-          <div class="price">UGX 35,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Facial%20Cleanser%20UGX35000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
+      <!-- MAKEUP 5 -->
+      <div class="prod-card" data-category="makeup"><div class="prod-img"><span class="badge">HOT</span><img src="https://images.unsplash.com/photo-1589710751893-f9a9794e8a02?q=80&w=600"></div><div class="prod-info"><div class="category">Makeup</div><h4>Matte Liquid Lipstick</h4><div class="price">UGX 25,000</div><a href="https://wa.me/256776934860?text=I%20want%20Matte%20Lipstick%20UGX25000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="makeup"><div class="prod-img"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600"></div><div class="prod-info"><div class="category">Makeup</div><h4>Full Coverage Foundation</h4><div class="price">UGX 80,000</div><a href="https://wa.me/256776934860?text=I%20want%20Foundation%20UGX80000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="makeup"><div class="prod-img"><img src="https://images.unsplash.com/photo-1512496015851-a90fb0c9a594?q=80&w=600"></div><div class="prod-info"><div class="category">Makeup</div><h4>18-Color Eyeshadow Palette</h4><div class="price">UGX 60,000</div><a href="https://wa.me/256776934860?text=I%20want%20Eyeshadow%20Palette%20UGX60000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="makeup"><div class="prod-img"><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=600"></div><div class="prod-info"><div class="category">Makeup</div><h4>Volume Mascara</h4><div class="price">UGX 30,000</div><a href="https://wa.me/256776934860?text=I%20want%20Mascara%20UGX30000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="makeup"><div class="prod-img"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600"></div><div class="prod-info"><div class="category">Makeup</div><h4>Contour & Highlight Kit</h4><div class="price">UGX 55,000</div><a href="https://wa.me/256776934860?text=I%20want%20Contour%20Kit%20UGX55000" class="btn-buy">ORDER NOW</a></div></div>
 
-      <div class="prod-card" data-category="skincare">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Skincare</div>
-          <h4>Sunscreen SPF 50</h4>
-          <div class="price">UGX 50,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Sunscreen%20SPF50%20UGX50000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
+      <!-- HAIR 5 -->
+      <div class="prod-card" data-category="hair"><div class="prod-img"><span class="badge">BESTSELLER</span><img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=600"></div><div class="prod-info"><div class="category">Hair Care</div><h4>Hair Growth Oil</h4><div class="price">UGX 40,000</div><a href="https://wa.me/256776934860?text=I%20want%20Hair%20Growth%20Oil%20UGX40000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="hair"><div class="prod-img"><img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=600"></div><div class="prod-info"><div class="category">Hair Care</div><h4>Moisturizing Shampoo</h4><div class="price">UGX 30,000</div><a href="https://wa.me/256776934860?text=I%20want%20Shampoo%20UGX30000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="hair"><div class="prod-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600"></div><div class="prod-info"><div class="category">Hair Care</div><h4>Deep Conditioner</h4><div class="price">UGX 30,000</div><a href="https://wa.me/256776934860?text=I%20want%20Conditioner%20UGX30000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="hair"><div class="prod-img"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618e?q=80&w=600"></div><div class="prod-info"><div class="category">Hair Care</div><h4>Human Hair Wig</h4><div class="price">UGX 350,000</div><a href="https://wa.me/256776934860?text=I%20want%20Human%20Hair%20Wig%20UGX350000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="hair"><div class="prod-img"><img src="https://images.unsplash.com/photo-1599579761979-3d1c0d9e6b6d?q=80&w=600"></div><div class="prod-info"><div class="category">Hair Care</div><h4>Hair Spray</h4><div class="price">UGX 25,000</div><a href="https://wa.me/256776934860?text=I%20want%20Hair%20Spray%20UGX25000" class="btn-buy">ORDER NOW</a></div></div>
 
-      <div class="prod-card" data-category="skincare">
-        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Skincare</div>
-          <h4>Shea Butter Body Lotion</h4>
-          <div class="price">UGX 45,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Body%20Lotion%20UGX45000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- MAKEUP -->
-      <div class="prod-card" data-category="makeup">
-        <span class="badge">HOT</span>
-        <img src="https://images.unsplash.com/photo-1589710751893-f9a9794e8a02?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Makeup</div>
-          <h4>Matte Liquid Lipstick - Nude</h4>
-          <div class="price">UGX 25,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Matte%20Lipstick%20UGX25000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="makeup">
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Makeup</div>
-          <h4>Full Coverage Foundation</h4>
-          <div class="price">UGX 80,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Foundation%20UGX80000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="makeup">
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb0c9a594?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Makeup</div>
-          <h4>18-Color Eyeshadow Palette</h4>
-          <div class="price">UGX 60,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Eyeshadow%20Palette%20UGX60000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="makeup">
-        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Makeup</div>
-          <h4>Volume Mascara</h4>
-          <div class="price">UGX 30,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Mascara%20UGX30000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- HAIR -->
-      <div class="prod-card" data-category="hair">
-        <span class="badge">BESTSELLER</span>
-        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Hair Care</div>
-          <h4>Hair Growth Oil</h4>
-          <div class="price">UGX 40,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Hair%20Growth%20Oil%20UGX40000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="hair">
-        <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Hair Care</div>
-          <h4>Moisturizing Shampoo</h4>
-          <div class="price">UGX 30,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Shampoo%20UGX30000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="hair">
-        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Hair Care</div>
-          <h4>Deep Conditioner</h4>
-          <div class="price">UGX 30,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Conditioner%20UGX30000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="hair">
-        <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618e?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Hair Care</div>
-          <h4>Human Hair Wig</h4>
-          <div class="price">UGX 350,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Human%20Hair%20Wig%20UGX350000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- FRAGRANCE -->
-      <div class="prod-card" data-category="fragrance">
-        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Fragrance</div>
-          <h4>Women Floral Perfume</h4>
-          <div class="price">UGX 120,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Women%20Perfume%20UGX120000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="fragrance">
-        <img src="https://images.unsplash.com/photo-1541643600914-78fee386f024?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Fragrance</div>
-          <h4>Men Cologne</h4>
-          <div class="price">UGX 120,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Men%20Cologne%20UGX120000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="fragrance">
-        <img src="https://images.unsplash.com/photo-1615529158035-2e3c7f9b2a6d?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Fragrance</div>
-          <h4>Body Spray</h4>
-          <div class="price">UGX 25,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Body%20Spray%20UGX25000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="prod-card" data-category="fragrance">
-        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&auto=format&fit=crop" loading="lazy">
-        <div class="prod-info">
-          <div class="category">Fragrance</div>
-          <h4>Body Mist</h4>
-          <div class="price">UGX 35,000</div>
-          <a href="https://wa.me/256776934860?text=Hi%20ALIDS,%20I%20want%20Body%20Mist%20UGX35000" class="btn-buy">Order on WhatsApp</a>
-        </div>
-      </div>
+      <!-- FRAGRANCE 5 -->
+      <div class="prod-card" data-category="fragrance"><div class="prod-img"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600"></div><div class="prod-info"><div class="category">Fragrance</div><h4>Women Floral Perfume</h4><div class="price">UGX 120,000</div><a href="https://wa.me/256776934860?text=I%20want%20Women%20Perfume%20UGX120000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="fragrance"><div class="prod-img"><img src="https://images.unsplash.com/photo-1541643600914-78fee386f024?q=80&w=600"></div><div class="prod-info"><div class="category">Fragrance</div><h4>Men Cologne</h4><div class="price">UGX 120,000</div><a href="https://wa.me/256776934860?text=I%20want%20Men%20Cologne%20UGX120000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="fragrance"><div class="prod-img"><img src="https://images.unsplash.com/photo-1615529158035-2e3c7f9b2a6d?q=80&w=600"></div><div class="prod-info"><div class="category">Fragrance</div><h4>Body Spray</h4><div class="price">UGX 25,000</div><a href="https://wa.me/256776934860?text=I%20want%20Body%20Spray%20UGX25000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="fragrance"><div class="prod-img"><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=600"></div><div class="prod-info"><div class="category">Fragrance</div><h4>Body Mist</h4><div class="price">UGX 35,000</div><a href="https://wa.me/256776934860?text=I%20want%20Body%20Mist%20UGX35000" class="btn-buy">ORDER NOW</a></div></div>
+      
+      <div class="prod-card" data-category="fragrance"><div class="prod-img"><span class="badge">NEW</span><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600"></div><div class="prod-info"><div class="category">Fragrance</div><h4>Unisex Perfume</h4><div class="price">UGX 90,000</div><a href="https://wa.me/256776934860?text=I%20want%20Unisex%20Perfume%20UGX90000" class="btn-buy">ORDER NOW</a></div></div>
 
     </div>
   </div>
@@ -259,17 +157,20 @@ footer a{color:var(--gold);text-decoration:none}
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p><b>ALIDS BEAUTY & COSMETICS</b></p>
-    <p>Kigumba Main Market, Kigumba Town | WhatsApp: <a href="https://wa.me/256776934860">0776934860</a></p>
-    <p>Free Delivery in Kigumba Town</p>
+    <div class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <p>Kigumba Main Market | <a href="https://wa.me/256776934860" style="color:var(--gold)">0776934860</a></p>
   </div>
 </footer>
 
 <script>
-// FILTER FUNCTION
+// FILTER
 const filterBtns = document.querySelectorAll('.filter-btn');
 const prodCards = document.querySelectorAll('.prod-card');
-
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
@@ -281,7 +182,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// SEARCH FUNCTION
+// SEARCH
 document.getElementById('searchBox').addEventListener('keyup', function(){
   const search = this.value.toLowerCase();
   prodCards.forEach(card => {
@@ -289,6 +190,17 @@ document.getElementById('searchBox').addEventListener('keyup', function(){
     card.style.display = name.includes(search) ? 'block' : 'none';
   });
 });
+
+// SCROLL ANIMATION
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting){
+      setTimeout(()=>{entry.target.classList.add('show')}, i*100);
+    }
+  });
+}, {threshold: 0.1});
+prodCards.forEach(card => observer.observe(card));
 </script>
+
 </body>
-  </html>
+                                                                                                                                                                                              </html>
