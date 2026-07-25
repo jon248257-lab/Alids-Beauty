@@ -4,51 +4,73 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us - ALIDS BEAUTY & COSMETICS | Kigumba</title>
-<meta name="description" content="Learn about ALIDS Beauty & Cosmetics in Kigumba. Original beauty products, expert advice, free delivery.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Learn about ALIDS Beauty. 100% Original products, Expert advice, Free Delivery in Kigumba.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#D4AF37;--black:#111;--white:#fff;--pink:#FFF5F7;--gray:#666}
+:root{--gold:#D4AF37;--black:#0A0A0A;--dark:#111;--white:#fff;--gray:#aaa}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:var(--white);color:var(--black);line-height:1.7}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-img{max-width:100%;border-radius:15px}
+body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white)}
+.container{max-width:1300px;margin:0 auto;padding:0 20px}
+img{width:100%;border-radius:8px}
 
-/* NAV */
-nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
-.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);font-weight:600;text-decoration:none}
-.btn-whatsapp{background:var(--gold);color:var(--black);padding:10px 20px;border-radius:50px;text-decoration:none;font-weight:600}
+/* NAV - SAME AS ALL PAGES */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid #222}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);font-weight:700;text-decoration:none;letter-spacing:2px}
+.nav-links{display:flex;gap:35px}
+.nav-links a{color:var(--white);text-decoration:none;font-weight:500;font-size:14px;letter-spacing:1px;transition:.3s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.btn-wa{background:var(--gold);color:var(--black);padding:12px 26px;font-weight:700;text-decoration:none}
 
-/* HEADER */
-.page-head{background:linear-gradient(135deg, var(--pink) 0%, #fff 100%);padding:60px 0;text-align:center}
-.page-head h1{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:10px}
+/* PAGE HEADER */
+.page-head{padding:160px 0 80px;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1600') center/cover fixed}
+.page-head h1{font-family:'Cormorant Garamond',serif;font-size:70px}
 .page-head h1 span{color:var(--gold)}
+.page-head p{color:var(--gray);font-size:20px;margin-top:15px}
 
 /* SECTIONS */
-.section{padding:60px 0}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.section-title{font-family:'Playfair Display',serif;font-size:34px;margin-bottom:20px}
+.section{padding:100px 0;background:var(--dark)}
+.section-alt{background:var(--black)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:50px;margin-bottom:20px}
 .section-title span{color:var(--gold)}
-.lead{font-size:18px;color:var(--gray);margin-bottom:20px}
+.section-sub{color:var(--gray);font-size:18px;line-height:1.8}
 
-.promise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:30px}
-.promise-card{background:var(--pink);padding:30px;border-radius:15px;text-align:center}
-.promise-card h3{color:var(--gold);margin:15px 0 10px;font-size:20px}
+/* STORY GRID */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.fade-in{opacity:0;transform:translateY(40px);transition:1s}
+.fade-in.show{opacity:1;transform:translateY(0)}
+
+/* PROMISE */
+.promise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+.promise-card{background:#0A0A0A;border:1px solid #222;padding:40px 30px;text-align:center;transition:.4s}
+.promise-card:hover{border-color:var(--gold);transform:translateY(-10px)}
+.promise-icon{font-size:50px;margin-bottom:20px;color:var(--gold)}
+.promise-card h3{font-size:22px;margin-bottom:15px}
 
 /* MAP */
-.map-wrap{border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-.map-wrap iframe{width:100%;height:400px;border:0}
+.map-wrap{border-radius:8px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 30px rgba(212,175,55,.2)}
+.map-wrap iframe{width:100%;height:450px;border:0;filter:grayscale(80%)}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.team-card{background:#0A0A0A;border:1px solid #222;text-align:center;padding-bottom:25px;transition:.4s}
+.team-card:hover{border-color:var(--gold)}
+.team-card img{height:350px;object-fit:cover}
+.team-info{padding:20px}
+.team-info h4{font-size:20px;color:var(--gold)}
 
 /* CTA */
-.cta{background:var(--black);color:var(--white);padding:60px 0;text-align:center}
-.cta h2{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:15px}
-.btn-primary{background:var(--gold);color:var(--black);padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-block}
+.cta{background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600') center/cover fixed;padding:120px 0;text-align:center}
+.btn-primary{background:var(--gold);color:var(--black);padding:16px 40px;text-decoration:none;font-weight:700;letter-spacing:1px;transition:.3s;display:inline-block}
+.btn-primary:hover{background:#c49e2c;transform:translateY(-3px)}
 
-footer{background:#000;color:var(--white);padding:40px 0;text-align:center}
-footer a{color:var(--gold);text-decoration:none}
+/* FOOTER */
+footer{background:#000;padding:60px 0;text-align:center;border-top:1px solid #222}
+.footer-links{display:flex;gap:30px;justify-content:center;margin-bottom:30px}
+.footer-links a{color:var(--white);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
 
-@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.nav-links{display:none}.story-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -56,8 +78,14 @@ footer a{color:var(--gold);text-decoration:none}
 <!-- NAV -->
 <nav>
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">ALIDS ✨</a>
-    <a href="https://wa.me/256776934860" class="btn-whatsapp">Order on WhatsApp</a>
+    <a href="index.html" class="logo">ALIDS</a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about.html" class="active">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <a href="https://wa.me/256776934860" class="btn-wa">WhatsApp</a>
   </div>
 </nav>
 
@@ -65,88 +93,137 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="page-head">
   <div class="container">
     <h1>About <span>ALIDS</span></h1>
-    <p>Your Trusted Beauty Destination in Kigumba</p>
+    <p>Your Luxury Beauty Destination in Kigumba</p>
   </div>
 </section>
 
 <!-- OUR STORY -->
 <section class="section">
-  <div class="container about-grid">
-    <div>
+  <div class="container story-grid">
+    <div class="fade-in">
       <h2 class="section-title">Our <span>Story</span></h2>
-      <p class="lead">We started ALIDS Beauty & Cosmetics with one goal: Help every woman and man in Kigumba glow with confidence.</p>
-      <p>We know how hard it is to find 100% original beauty products at affordable prices. Fake products damage skin and waste money. That’s why ALIDS only stocks authentic skincare, makeup, haircare and fragrances from trusted suppliers.</p>
-      <p>From our shop at Kigumba Main Market, we’ve served hundreds of customers who now trust us for their beauty needs. Whether you want glowing skin, perfect makeup, or healthy hair - we’ve got you.</p>
+      <p class="section-sub">ALIDS Beauty & Cosmetics was born from one simple frustration: Finding 100% authentic beauty products in Kigumba was impossible.</p>
+      <p class="section-sub">We were tired of fake products damaging skin and wasting money. So we decided to change that. Today, ALIDS is Kigumba’s trusted source for original skincare, makeup, haircare and fragrances.</p>
+      <p class="section-sub">From our shop at Kigumba Main Market, we serve hundreds of clients who now glow with confidence. Because beauty should be authentic, affordable, and accessible.</p>
     </div>
-    <div>
-      <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&auto=format&fit=crop" alt="ALIDS Beauty Products" loading="lazy">
+    <div class="fade-in">
+      <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618e?q=80&w=800" alt="ALIDS Shop">
     </div>
   </div>
 </section>
 
 <!-- OUR PROMISE -->
-<section class="section" style="background:var(--pink)">
+<section class="section section-alt">
   <div class="container">
     <h2 class="section-title" style="text-align:center">Our <span>Promise</span></h2>
+    <p class="section-sub" style="text-align:center;margin-bottom:20px">Why 500+ customers trust ALIDS</p>
     <div class="promise-grid">
-      <div class="promise-card">
-        <h3>✓ 100% Original</h3>
-        <p>We guarantee all our products are authentic. No fakes, ever.</p>
+      <div class="promise-card fade-in">
+        <div class="promise-icon">✓</div>
+        <h3>100% Authentic</h3>
+        <p>Every product is sourced directly from trusted suppliers. No fakes, ever. Guaranteed.</p>
       </div>
-      <div class="promise-card">
-        <h3>💄 Expert Advice</h3>
-        <p>Free beauty consultation to help you choose what works for your skin.</p>
+      <div class="promise-card fade-in">
+        <div class="promise-icon">💄</div>
+        <h3>Expert Advice</h3>
+        <p>Not sure what works for your skin? We give free consultations to match you with the right products.</p>
       </div>
-      <div class="promise-card">
-        <h3>🚚 Fast Delivery</h3>
-        <p>Free delivery in Kigumba Town. We bring beauty to your door.</p>
+      <div class="promise-card fade-in">
+        <div class="promise-icon">🚚</div>
+        <h3>Free Delivery</h3>
+        <p>We deliver fast and free within Kigumba Town. Because convenience is luxury.</p>
       </div>
-      <div class="promise-card">
-        <h3>💰 Affordable</h3>
-        <p>Premium products at prices that make sense for you.</p>
+      <div class="promise-card fade-in">
+        <div class="promise-icon">💰</div>
+        <h3>Fair Pricing</h3>
+        <p>Luxury quality without luxury price tags. Premium products at prices that make sense.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LOCATION & MAP -->
+<!-- VISIT US -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title" style="text-align:center">Visit <span>Us</span></h2>
-    <p style="text-align:center;color:var(--gray);margin-bottom:30px">
-      <b>Address:</b> Kigumba Main Market, Kigumba Town <br>
-      <b>Hours:</b> Monday - Saturday: 8:00am - 7:00pm | Sunday: Closed
+    <h2 class="section-title" style="text-align:center">Visit <span>Our Store</span></h2>
+    <p class="section-sub" style="text-align:center;margin-bottom:40px">
+      <b>Kigumba Main Market, Kigumba Town</b><br>
+      Mon - Sat: 8:00am - 7:00pm | Sunday: Closed
     </p>
-    <div class="map-wrap">
-      <!-- DEFAULT MAP LINK FOR KIGUMBA MAIN MARKET -->
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123!2d32.0833!3d1.9333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwNTYnMDAuMCJOIDMywrAwNScwMC4wIkU!5e0!3m2!1sen!2sug!4v1234567890" 
-        allowfullscreen="" loading="lazy">
-      </iframe>
+    <div class="map-wrap fade-in">
+      <!-- DEFAULT MAP FOR KIGUMBA MAIN MARKET -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0!2d32.0833!3d1.9333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwNTYnMDAuMCJOIDMywrAwNScwMC4wIkU!5e0!3m2!1sen!2sug!4v1234567890" allowfullscreen loading="lazy"></iframe>
     </div>
-    <p style="text-align:center;margin-top:20px">
-      <a href="https://maps.google.com/?q=Kigumba+Main+Market" target="_blank" style="color:var(--gold);font-weight:600">Open in Google Maps →</a>
-    </p>
+    <div style="text-align:center;margin-top:30px">
+      <a href="https://maps.google.com/?q=Kigumba+Main+Market" target="_blank" class="btn-primary">OPEN IN GOOGLE MAPS</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title" style="text-align:center">Meet <span>Our Team</span></h2>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600" alt="Beauty Consultant">
+        <div class="team-info">
+          <h4>Sarah N.</h4>
+          <p>Lead Beauty Consultant</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600" alt="Store Manager">
+        <div class="team-info">
+          <h4>Grace A.</h4>
+          <p>Store Manager</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=600" alt="Skincare Expert">
+        <div class="team-info">
+          <h4>Patricia M.</h4>
+          <p>Skincare Specialist</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
   <div class="container">
-    <h2>Ready to Glow?</h2>
-    <p style="margin-bottom:25px">Chat with us on WhatsApp and get beauty recommendations today</p>
-    <a href="https://wa.me/256776934860" class="btn-primary">Chat 0776934860</a>
+    <h2 class="section-title">Ready to Glow With Us?</h2>
+    <p style="color:var(--gray);margin:20px 0 30px">Chat with us on WhatsApp for recommendations</p>
+    <a href="https://wa.me/256776934860" class="btn-primary">CHAT ON WHATSAPP</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p><b>ALIDS BEAUTY & COSMETICS</b></p>
-    <p>Kigumba Main Market, Kigumba Town | <a href="https://wa.me/256776934860">0776934860</a></p>
-    <p>© 2026 ALIDS Beauty. Glow Naturally.</p>
+    <div class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    <h3 style="font-family:'Cormorant Garamond';font-size:28px;color:var(--gold);margin-bottom:15px">ALIDS BEAUTY & COSMETICS</h3>
+    <p>Kigumba Main Market | <a href="https://wa.me/256776934860" style="color:var(--gold)">0776934860</a></p>
   </div>
 </footer>
+
+<script>
+// SCROLL ANIMATION
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
   </html>
